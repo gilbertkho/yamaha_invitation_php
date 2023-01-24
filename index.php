@@ -60,8 +60,8 @@
                 <p class="prg text-uppercase invitation-date" lang="en" data-aos ='fade-up'></p>
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">
-                <img src="./assets/fazzio.png" width="160px" data-aos="fade-right">
-                <img src="./assets/grand_filano.png" width="200px" data-aos="fade-left">
+                <img src="./assets/motor-baru1.png" width="160px" data-aos="fade-right">
+                <img src="./assets/motor-baru2.png" width="160px" data-aos="fade-left">
             </footer>
         </div>
         <div class="invitation-page" id="event-section">
@@ -158,8 +158,8 @@
                 </div>
             </form>
             <footer class="d-flex justify-content-between align-items-center p-2">
-                <img src="./assets/fazzio.png" width="160px" data-aos="fade-right">
-                <img src="./assets/grand_filano.png" width="200px" data-aos="fade-left">
+                <img src="./assets/freego.png" width="160px" data-aos="fade-right">
+                <img src="./assets/freego-1.png" width="160px" data-aos="fade-left">
             </footer>
         </div>
     </div>
