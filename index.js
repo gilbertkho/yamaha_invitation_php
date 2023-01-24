@@ -9,7 +9,7 @@ const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday",
 const dayNames_id = ["Minggu", "Senin", "Selasa", "Rabu",
 "Kamis", "Jumaat","Sabtu"];
 
-let event_date = new Date('2023/01/30 10:00');
+let event_date = new Date('2023/01/30 08:30');
 let hour = 24;
 let minute = 60;
 let second = 60;

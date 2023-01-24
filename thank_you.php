@@ -23,7 +23,7 @@
     <div class="body-width mx-auto" style="background-color:#f6f6f6;">
         <div class="invitation-page" id="home-section">
             <header class="d-flex justify-content-between align-items-center p-2">
-                <img src="./assets/frame1.png" width="75px">
+                <img src="./assets/Logo Yamaha stsj.png" width="180px">
                 <img src="./assets/frame2.png" width="75px">
             </header>
             <div class="page-content d-flex flex-column justify-content-center align-items-center text-main">
@@ -33,8 +33,8 @@
                 <p class="prg text-uppercase invitation-date" lang="en" data-aos ='fade-up'></p>
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">
-                <img src="./assets/motor-baru1.png" width="150px">
-                <img src="./assets/motor-baru2.png" width="150px">
+                <img src="./assets/fazzio.png" width="160px" data-aos="fade-right">
+                <img src="./assets/grand_filano.png" width="200px" data-aos="fade-left">
             </footer>
         </div>
     </div>
