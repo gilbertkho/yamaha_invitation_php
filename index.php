@@ -4,11 +4,11 @@
 
     $get_id = input_get('id');
     
-    $stmt   = "SELECT nama FROM undangan WHERE id = $get_id";
+    $stmt   = "SELECT nama,nohp FROM undangan WHERE id = $get_id";
     $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
         
-    $nama = mysqli_fetch_row($query);
-    // dd($nama);
+    $data = mysqli_fetch_assoc($query);
+    // dd($data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +72,7 @@
                 <p class="prg text-uppercase invitation-date" lang="id" data-aos ='fade-up'></p>
                 <h4 class="ttl fw-bold text-capitalize mt-5 text-center">
                     Kepada Yth. <br>
-                    Bpk/Ibu <?= $nama[0]?>
+                    Bpk/Ibu <?= $data['nama']?>
                 </h4>
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">
@@ -164,10 +164,10 @@
                         <h5 class="text-main ttl fw-bold text-center mb-3">Apakah anda bersedia untuk menghadiri acara Yamaha Block Meeting 2023?</h5>
                         <div class="d-flex justify-content-around">
                             <!-- <input type="hidden" value="yes" name="confirm"> -->
-                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=tidak&nama=<?= $nama[0]?>" class="btn bg-secondary text-white"> Tidak</a>
+                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=tidak&nama=<?= $data['nama']?>&no_telp=<?=$data['nohp']?>" class="btn bg-secondary text-white"> Tidak</a>
                             <!-- <input type='submit' value="Tidak" name="confirm" > -->
                             <!-- <input type="hidden" value="no" name="confirm"> -->
-                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=ya&nama=<?= $nama[0]?>" class="btn bg-main text-white">Ya</a>
+                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=ya&nama=<?= $data['nama']?>&no_telp=<?=$data['nohp']?>" class="btn bg-main text-white">Ya</a>
                             <!-- <input type='submit' value="Ya" name="confirm" > -->                            
                         </div>
                     </div>
