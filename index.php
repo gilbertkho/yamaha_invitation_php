@@ -86,7 +86,7 @@
                                 <i class="far fa-clock"></i>
                             </div>
                             <div class="col-11 text-start">
-                                <p>10:00 - 13:00</p>
+                                <p>08:30 - 13:00</p>
                             </div>
                         </div>
                         <div class="row">
@@ -133,7 +133,7 @@
                 </div>
                 <footer class="d-flex justify-content-between align-items-center p-2">
                     <img src="./assets/fazzio.png" width="160px" data-aos="fade-right">
-                    <img src="./assets/grand_filano.png" width="200px" data-aos="fade-left">
+                    <img src="./assets/grand.png" width="160px" data-aos="fade-left">
                 </footer>
             </div>
         </div>
@@ -158,8 +158,8 @@
                 </div>
             </form>
             <footer class="d-flex justify-content-between align-items-center p-2">
-                <img src="./assets/freego.png" width="160px" data-aos="fade-right">
-                <img src="./assets/freego-1.png" width="160px" data-aos="fade-left">
+                <img src="./assets/freego-11.png" width="160px" data-aos="fade-right">
+                <img src="./assets/freego-12.png" width="160px" data-aos="fade-left">
             </footer>
         </div>
     </div>

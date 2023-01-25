@@ -34,7 +34,7 @@
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">
                 <img src="./assets/fazzio.png" width="160px" data-aos="fade-right">
-                <img src="./assets/grand_filano.png" width="200px" data-aos="fade-left">
+                <img src="./assets/grand.png" width="160px" data-aos="fade-left">
             </footer>
         </div>
     </div>
