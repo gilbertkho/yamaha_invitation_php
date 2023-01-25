@@ -1,6 +1,7 @@
 <?php
 require_once('conn.php');
 require_once('core.php');
+
 $konfirmasi = input_get('konfirmasi');
 $id = input_get('id');
 
@@ -14,7 +15,5 @@ else{
 }
 $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
 
-echo $stmt;
-
-redirect('./thank_you.php');
+redirect("./thank_you.php?id=$id");
 ?>

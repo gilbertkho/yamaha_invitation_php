@@ -1,3 +1,15 @@
+<?php
+    require_once('conn.php');
+    require_once('core.php');
+
+    $get_id = input_get('id');
+    
+    $stmt   = "SELECT nama FROM undangan WHERE id = $get_id";
+    $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
+        
+    $nama = mysqli_fetch_row($query);
+    // dd($nama);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +39,18 @@
                 <img src="./assets/frame2.png" width="75px">
             </header>
             <div class="page-content d-flex flex-column justify-content-center align-items-center text-main">
-                <h3 class="ttl fw-bold text-center">
-                   Terima kasih anda telah melakukan konfirmasi kehadiran.
-                </h3>
+                <h5 class="ttl fw-bold text-center">
+                Terima kasih Bapak / Ibu <strong class='text-capitalize'><?=$nama[0]?></strong> sudah melakukan konfirmasi
+                Berikut adalah tiket Masuk Digital Anda: <br>
+                <div class="w-100 my-3">
+                    <img src="./assets/qr_dummy.jpeg" class='img-fluid'>
+                </div>
+                Silahkan Scan Tiket ini di Pintu Masuk untuk mendapatkan tempat duduk yg telah disediakan
+                Mohon membawa Hasil tes Antigen Maksimal H-2
+                <br>
+                Terima kasih 
+                Salam Yamaha Semakin di Depan.
+                </h5>
                 <p class="prg text-uppercase invitation-date" lang="en" data-aos ='fade-up'></p>
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">

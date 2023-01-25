@@ -1,3 +1,15 @@
+<?php
+    require_once('conn.php');
+    require_once('core.php');
+
+    $get_id = input_get('id');
+    
+    $stmt   = "SELECT nama FROM undangan WHERE id = $get_id";
+    $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
+        
+    $nama = mysqli_fetch_row($query);
+    // dd($nama);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,8 +68,12 @@
                 <h2 class="ttl text-uppercase fw-bold text-center">
                     Yamaha Block<br>
                     Meeting 2023
-                </h2>                
-                <p class="prg text-uppercase invitation-date" lang="en" data-aos ='fade-up'></p>
+                </h2>
+                <p class="prg text-uppercase invitation-date" lang="id" data-aos ='fade-up'></p>
+                <h4 class="ttl fw-bold text-capitalize mt-5 text-center">
+                    Kepada Yth. <br>
+                    Bpk/Ibu <?= $nama[0]?>
+                </h4>
             </div>
             <footer class="d-flex justify-content-between align-items-center p-2">
                 <img src="./assets/motor-baru1.png" width="160px" data-aos="fade-right">
@@ -102,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="ttl fw-bold mb-2">Countdown</p>                    
+                    <p class="ttl fw-bold mb-1">Countdown</p>                    
                     <div class="bg-main text-white d-flex p-2 col-10 col-sm-9 col-md-8 justify-content-around row rounded-3" data-aos="fade-up" data-aos-duration="500">                    
                         <div class="text-center col-2 p-0">
                             <h3 class='m-0 prg' id="days">00</h3>
