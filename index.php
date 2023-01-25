@@ -164,11 +164,11 @@
                         <h5 class="text-main ttl fw-bold text-center mb-3">Apakah anda bersedia untuk menghadiri acara Yamaha Block Meeting 2023?</h5>
                         <div class="d-flex justify-content-around">
                             <!-- <input type="hidden" value="yes" name="confirm"> -->
-                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=tidak" class="btn bg-secondary text-white"> Tidak</a>
+                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=tidak&nama=<?= $nama[0]?>" class="btn bg-secondary text-white"> Tidak</a>
                             <!-- <input type='submit' value="Tidak" name="confirm" > -->
                             <!-- <input type="hidden" value="no" name="confirm"> -->
-                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=ya" class="btn bg-main text-white">Ya</a>
-                            <!-- <input type='submit' value="Ya" name="confirm" > -->
+                            <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=ya&nama=<?= $nama[0]?>" class="btn bg-main text-white">Ya</a>
+                            <!-- <input type='submit' value="Ya" name="confirm" > -->                            
                         </div>
                     </div>
                 </div>
