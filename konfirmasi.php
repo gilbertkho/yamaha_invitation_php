@@ -16,7 +16,7 @@ $arrContextOptions = array(
 $stmt = "";
 
 if($konfirmasi == 'ya'){
-    $stmt   = "UPDATE undangan SET status_kehadiran = 1 WHERE id = $id";
+    $stmt   = "UPDATE undangan SET status_registrasi = 1 WHERE id = $id";
 
     if(substr($no_telp, 0, 1) == "8"){
         $no_telp = "0".$no_telp;
@@ -49,7 +49,7 @@ if($konfirmasi == 'ya'){
     redirect("./thank_you.php?id=$id");
 }
 else{
-    $stmt    = "UPDATE undangan SET status_kehadiran = 2 WHERE id = $id";
+    $stmt    = "UPDATE undangan SET status_registrasi = 2 WHERE id = $id";
     $query   = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
     redirect("./thank_you.php?id=$id&konfirmasi=tidak");
 }
