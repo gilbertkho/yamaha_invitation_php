@@ -114,7 +114,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="col-11 text-start">
-                                <p class="m-0"><strong>The Westin Surabaya</strong>, <br>
+                                <p class="m-0"><strong>The Westin Surabaya (Ballroom lt.M1)</strong>, <br>
                                 Pakuwon Mall, Jl. Raya Lontar No.2, Puncak Indah, Surabaya City, East Java 60216</p>
                                 <a target='_blank' href="https://www.google.com/maps/place/The+Westin+Surabaya/@-7.2892488,112.6737477,17z/data=!3m1!4b1!4m8!3m7!1s0x2dd7fc498f1cffc5:0xc0718e958df80ba0!5m2!4m1!1i2!8m2!3d-7.2892488!4d112.6759364">
                                     Open Google Maps
