@@ -3,11 +3,15 @@
     require_once('core.php');
 
     $get_id = input_get('id');
-    
-    $stmt   = "SELECT nama,nohp FROM undangan WHERE id = $get_id";
-    $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
-        
-    $data = mysqli_fetch_assoc($query);
+    $data = [];
+    $data['nama'] = "";
+    $data['nohp'] = "";
+    if($get_id){
+        $stmt   = "SELECT nama,nohp FROM undangan WHERE id = $get_id";
+        $query  = mysqli_query($conn, $stmt) or die(mysqli_error($conn));
+            
+        $data = mysqli_fetch_assoc($query);
+    }
     // dd($data);
 ?>
 <!DOCTYPE html>
@@ -66,7 +70,7 @@
             </header>
             <div class="page-content d-flex flex-column justify-content-center align-items-center text-main">
                 <h2 class="ttl text-uppercase fw-bold text-center">
-                    Yamaha Block<br>
+                    Yamaha Dealer<br>
                     Meeting 2023
                 </h2>
                 <p class="prg text-uppercase invitation-date" lang="id" data-aos ='fade-up'></p>
@@ -110,8 +114,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="col-11 text-start">
-                                <p class="m-0">The Westin Surabaya, <br>
-                                Pakuwon Mall Jalan, Jl. Raya Lontar No.2, Puncak Indah, Surabaya City, East Java 60216</p>
+                                <p class="m-0"><strong>The Westin Surabaya</strong>, <br>
+                                Pakuwon Mall, Jl. Raya Lontar No.2, Puncak Indah, Surabaya City, East Java 60216</p>
                                 <a target='_blank' href="https://www.google.com/maps/place/The+Westin+Surabaya/@-7.2892488,112.6737477,17z/data=!3m1!4b1!4m8!3m7!1s0x2dd7fc498f1cffc5:0xc0718e958df80ba0!5m2!4m1!1i2!8m2!3d-7.2892488!4d112.6759364">
                                     Open Google Maps
                                 </a>
@@ -161,7 +165,7 @@
             <form method="POST" action = <?='?'?>>
                 <div class="page-content d-flex flex-column align-items-center justify-content-center text-main col-9 mx-auto">
                     <div class="p-3 rounded-3 border-main" data-aos="fade-down">
-                        <h5 class="text-main ttl fw-bold text-center mb-3">Apakah anda bersedia untuk menghadiri acara Yamaha Block Meeting 2023?</h5>
+                        <h5 class="text-main ttl fw-bold text-center mb-3">Apakah anda bersedia untuk menghadiri acara Yamaha Dealer Meeting 2023?</h5>
                         <div class="d-flex justify-content-around">
                             <!-- <input type="hidden" value="yes" name="confirm"> -->
                             <a href="konfirmasi.php?id=<?= $_GET['id'] ?>&konfirmasi=tidak&nama=<?= $data['nama']?>&no_telp=<?=$data['nohp']?>" class="btn bg-secondary text-white"> Tidak</a>
